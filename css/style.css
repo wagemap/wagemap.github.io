@@ -721,3 +721,23 @@
         display: none;
     }
 }
+
+
+.resource-image {
+    width: 100%;
+    height: auto;
+}
+
+.resource-link:hover {
+    text-decoration: underline;
+}
+
+.news-item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+}
+
+/* .news-date {
+    margin-top: 0px;
+} */
