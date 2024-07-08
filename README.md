@@ -1,2 +1,2 @@
 # wagemap.github.io
-Website design for the WageMap project
+Website for the WageMap Initative

@@ -747,3 +747,27 @@
 /* .news-date {
     margin-top: 0px;
 } */
+
+.image_rotate {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image_rotate.hidden {
+    opacity: 0;
+}
+
+.social_media_link_text {
+    margin-top: 6px;
+    padding-right: 6px;
+}
+
+.footer_partner_logos {
+    display: inline-block;
+    width: 100%;
+}
+
+.footer_partner_logo {
+    display: inline-block;
+    padding-right: 5px;
+    width: 45%;
+}
