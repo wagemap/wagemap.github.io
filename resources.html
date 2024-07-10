@@ -3,17 +3,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6MZRGKKM4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-G6MZRGKKM4');
-  </script>
-
   <title>Resources | WageMap</title>
+  
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta
     content="Living Wage, WageMap, Living Wage Data, Living Wage Standard, Wage Benchmarking, Global Living Wage, Standardizing Living Wage, Living Wage Methodologies, Living Wage Gap, Living Wage Consortium, Living Wage Reference Standard, Living Wage Framework, Wage Disparities, Economic Inequality, Fair Compensation, Sustainable Labor Practices, Living Wage Policy, Ethical Labor Practices, Wage Indicator, Living Wage Benchmark Data, Living Wage Implementation, Living Wage Movement, Closing Wage Gap, Wage Transparency, Living Wage Accreditation, Decent Standard of Living, Worker Productivity, Labor Market Transparency, Social Responsibility, Ethical Purchasing Practices"
@@ -96,7 +87,7 @@
         <a href="resources.html" class="nav-item nav-link active">Resources</a>
       </div>
     </div>
-    <a href="get_involved.html" class="btn btn-primary px-3 d-none d-lg-block">Get Involved</a>
+    <a href="get-involved.html" class="btn btn-primary px-3 d-none d-lg-block">Get Involved</a>
   </nav>
   <!-- Navbar End -->
 
@@ -409,7 +400,7 @@
           <h1 class="text-white mb-4">
             <img class="img-fluid me-3 logo-footer" src="img/wagemap_light.png" alt="WageMap Logo" />
           </h1>
-          <p><i class="fa fa-envelope me-3"></i><a
+          <p style="margin-bottom: 0px!important;"><i class="fa fa-envelope me-3"></i><a
               href="mailto:joost.backer@newforesight.com">joost.backer@newforesight.com</a></p>
           <div class="d-flex pt-2">
             <!-- <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
@@ -438,7 +429,9 @@
           <a class="btn btn-link" href="news.html">News</a>
           <a class="btn btn-link" href="community.html">Community</a>
           <a class="btn btn-link" href="resources.html">Resources</a>
-          <a class="btn btn-link" href="get_involved.html">Get Involved</a>
+          <a class="btn btn-link" href="get-involved.html">Get Involved</a>
+          <a class="btn btn-link" href="cookie-policy.html">Cookie Policy</a>
+
         </div>
         <div class="col-lg-5 col-md-6">
           <h5 class="text-light mb-4">Newsletter</h5>
@@ -516,6 +509,13 @@
   <!-- Back to Top -->
   <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By using our site, you agree to our <a href="cookie-policy.html" target="_blank">cookie
+        policy</a>.</p>
+    <button id="accept-cookies" class="cookie-button">Accept</button>
+  </div>
+
   <!-- JavaScript Libraries -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -527,12 +527,16 @@
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
+  <script src="js/rotate_images.js"></script>
 
   <!-- Mailchimp Javascript -->
   <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
   <script type="text/javascript">
     (function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; }(jQuery)); var $mcj = jQuery.noConflict(true);
   </script>
+
+  <!-- Cookie Banner Javascript -->
+  <script src="js/cookie_banner.js"></script>
 
 </body>
 

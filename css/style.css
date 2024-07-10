@@ -771,3 +771,41 @@
     padding-right: 5px;
     width: 45%;
 }
+
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1000;
+  }
+  
+  .cookie-banner p {
+    margin: 0;
+    padding-right: 10px;
+    display: inline;
+  }
+  
+  .cookie-banner a {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+  
+  .cookie-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .cookie-button:hover {
+    background-color: var(--secondary);
+  }
