@@ -809,3 +809,45 @@
   .cookie-button:hover {
     background-color: var(--secondary);
   }
+
+  .anchor-target {
+    scroll-margin-top: 85px;
+}
+
+@media (max-width: 991px) {
+    .hide-on-small-screens {
+        display: none;
+    }
+}
+
+#banner-container {
+    height:130px; 
+    position:relative; 
+    overflow:hidden;
+    background-color: #f4f4f4;
+    padding: 10px 0;
+  }
+  
+  .photobanner {
+    position:absolute; 
+    top:15px; 
+    left:0px; 
+    overflow:hidden; 
+    white-space: nowrap;
+    animation: bannermove 25s linear infinite;
+  }
+  
+  .photobanner img {    
+    margin: 0 3em;
+    max-width: 250px;
+    max-height: 100px;
+  }
+  
+  @keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+  }
