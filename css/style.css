@@ -787,7 +787,7 @@
 }
 
 @media (max-width: 991px) {
-    .cookie-banner {
+    .cookie-banner button {
         display: block;
     }
 }
