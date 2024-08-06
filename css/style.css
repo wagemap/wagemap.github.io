@@ -728,6 +728,13 @@
     }
 }
 
+.hide-desktop {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+
 
 .resource-image {
     width: 100%;
