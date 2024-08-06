@@ -827,6 +827,12 @@
     }
 }
 
+@media (min-width: 992px) {
+    .hide-on-large-screens {
+        display: none;
+    }
+}
+
 #banner-container {
     height: 130px;
     position: relative;
