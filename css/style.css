@@ -639,7 +639,7 @@
         display: inline-block;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
-      }
+    }
 
     /* circle */
     ul li .date::after {
@@ -773,6 +773,7 @@
 }
 
 .cookie-banner {
+    max-width: 89%;
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -780,23 +781,29 @@
     color: #fff;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 1000;
-  }
-  
-  .cookie-banner p {
+}
+
+@media (max-width: 991px) {
+    .cookie-banner {
+        display: block;
+    }
+}
+
+.cookie-banner p {
     margin: 0;
     padding-right: 10px;
     display: inline;
-  }
-  
-  .cookie-banner a {
+}
+
+.cookie-banner a {
     color: var(--primary);
     text-decoration: underline;
-  }
-  
-  .cookie-button {
+}
+
+.cookie-button {
     background-color: var(--primary);
     color: white;
     border: none;
@@ -804,13 +811,13 @@
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
-  }
-  
-  .cookie-button:hover {
-    background-color: var(--secondary);
-  }
+}
 
-  .anchor-target {
+.cookie-button:hover {
+    background-color: var(--secondary);
+}
+
+.anchor-target {
     scroll-margin-top: 85px;
 }
 
@@ -821,33 +828,34 @@
 }
 
 #banner-container {
-    height:130px; 
-    position:relative; 
-    overflow:hidden;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
     background-color: #f4f4f4;
     padding: 10px 0;
-  }
-  
-  .photobanner {
-    position:absolute; 
-    top:15px; 
-    left:0px; 
-    overflow:hidden; 
+}
+
+.photobanner {
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    overflow: hidden;
     white-space: nowrap;
     animation: bannermove 25s linear infinite;
-  }
-  
-  .photobanner img {    
+}
+
+.photobanner img {
     margin: 0 3em;
     max-width: 250px;
     max-height: 100px;
-  }
-  
-  @keyframes bannermove {
+}
+
+@keyframes bannermove {
     0% {
         transform: translate(0, 0);
     }
+
     100% {
         transform: translate(-50%, 0);
     }
-  }
+}
