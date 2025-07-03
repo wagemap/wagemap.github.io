@@ -549,11 +549,11 @@
 }
 
 .bg-dark a {
-    color: rgba(255, 255, 255, 0.5) !important
+    color: white !important
 }
 
 .bg-dark a:hover {
-    color: rgba(255, 255, 255, 0.7) !important
+    color: var(--primary) !important
 }
 
 .text-white a {
@@ -789,7 +789,7 @@
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background-color: #333;
+    background-color: #15233C;
     color: #fff;
     padding: 15px;
     border-radius: 5px;
