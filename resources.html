@@ -128,8 +128,7 @@
 
                 <div class="col-lg-2 col-md-3 col-12" data-wow-delay="0.1s">
                   <div class="resource-image">
-                    <a href="survey-information.html"
-                      target="_blank">
+                    <a href="survey-information.html" target="_blank">
                       <img class="img-fluid mb-5" src="resources/doc-icon-primary.png"
                         alt="Information on Round 2 Public Consultation & How to Participate" />
                     </a>
@@ -137,8 +136,7 @@
                 </div>
 
                 <div class="col-lg-10 col-md-9 col-12" data-wow-delay="0.1s">
-                  <a href="survey-information.html"
-                    target="_blank">
+                  <a href="survey-information.html" target="_blank">
                     <h4 class="mb-2 resource-link">Information on Round 2 Public Consultation &amp; How to Participate
                     </h4>
                   </a>
@@ -149,8 +147,9 @@
                     impacted by the implementation of the Living Wage Reference Standard.
                     We ran our first round of public consultations in Fall 2024 and we are running our second
                     round of public consultations in Summer 2025.
-                   
-                    For more information on the second round of public consultations, and how to participate, click <a href="survey-information.html" target="_blank">here</a>. 
+
+                    For more information on the second round of public consultations, and how to participate, click <a
+                      href="survey-information.html" target="_blank">here</a>.
                   </p>
                 </div>
               </div>
@@ -177,18 +176,18 @@
                   <p>
                     The draft version of the Living Wage Reference Standard for review and feedback during Consultation
                     Round 2.<br>
-                    <a href="resources/consultation-round-2/Draft Living Wage Reference Standard.pdf"
-                      target="_blank">Download.</a>
+                    <a href="javascript:myFunction()">Download.</a>
                   </p>
                   <p>
-                    This document will be translated into French and Spanish to improve accessibility for all stakeholders. Translateions will be made available here shortly.
+                    This document will be translated into French and Spanish to improve accessibility for all
+                    stakeholders. Translateions will be made available here shortly.
                   </p>
                 </div>
               </div>
             </div>
             <!-- Resource Item End -->
 
-              <!-- Resource Item Start -->
+            <!-- Resource Item Start -->
             <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
               <div class="row g-4 resource-item team-item partner-item rounded">
 
@@ -206,7 +205,8 @@
                     <h4 class="mb-2 resource-link">Round 2 Consultation - Survey</h4>
                   </a>
                   <p>
-                    Link to the survey for the second round of public consultation on the Living Wage Reference Standard.<br>
+                    Link to the survey for the second round of public consultation on the Living Wage Reference
+                    Standard.<br>
                     <a href="https://www.surveymonkey.com/r/FWZ8S3F" target="_blank">Open on surveymonkey.</a>
                   </p>
                 </div>
@@ -214,7 +214,7 @@
             </div>
             <!-- Resource Item End -->
 
-             <!-- Resource Item Start -->
+            <!-- Resource Item Start -->
             <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
               <div class="row g-4 resource-item team-item partner-item rounded">
 
@@ -246,8 +246,7 @@
 
                 <div class="col-lg-2 col-md-3 col-12" data-wow-delay="0.1s">
                   <div class="resource-image">
-                    <a href="glossary.html"
-                      target="_blank">
+                    <a href="glossary.html" target="_blank">
                       <img class="img-fluid mb-5" src="resources/doc-icon-primary.png"
                         alt="Glossary Living Wage Reference Standard" />
                     </a>
@@ -260,8 +259,7 @@
                   </a>
                   <p>
                     Glossary of terms and definitions used in the Living Wage Reference Standard documentation.<br>
-                    <a href="glossary"
-                      target="_blank">Open on new page.</a>
+                    <a href="glossary" target="_blank">Open on new page.</a>
                   </p>
                 </div>
               </div>
@@ -269,7 +267,7 @@
             <!-- Resource Item End -->
 
 
-           
+
 
 
             <!-- Resource Item Start -->
@@ -766,6 +764,77 @@
   <!-- Cookie Banner Javascript -->
   <script src="js/cookie_banner.js"></script>
 
+  <!-- Survey Modal -->
+  <div class="modal fade" id="surveyModal" tabindex="-1" aria-labelledby="surveyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="surveyModalLabel">Please complete this short survey before downloading
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-header">
+        <p> Please close this window after completing the survey to continue to the download.</p>
+        </div>
+        <div class="modal-body" style="min-height:500px;">
+          <!-- SurveyMonkey embed -->
+          <iframe id="surveyMonkeyFrame" src="https://www.surveymonkey.com/r/KSPB8GN" width="100%" height="500"
+            frameborder="0" style="border:0;" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Intercept download link for the Draft Living Wage Reference Standard -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var draftLinks = Array.from(document.querySelectorAll('a, a[href^="javascript"]')).filter(function (link) {
+        // Match the main resource link
+        if (link.getAttribute('href') === 'resources/consultation-round-2/Draft Living Wage Reference Standard.pdf') return true;
+        return false;
+      });
+
+      draftLinks.forEach(function (draftLink) {
+        draftLink.addEventListener('click', function (e) {
+          // Only intercept if not already allowed or if surveyCompleted cookie is set
+          function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+          }
+
+          if (!draftLink.dataset.surveyCompleted && getCookie('surveyCompleted') !== 'true') {
+            e.preventDefault();
+            var surveyModal = new bootstrap.Modal(document.getElementById('surveyModal'));
+            surveyModal.show();
+          }
+        });
+      });
+
+      // Handle survey completion
+      document.getElementById('surveyModal').addEventListener('hidden.bs.modal', function () {
+        // Mark the link as completed
+        draftLinks.forEach(function (draftLink) {
+          draftLink.dataset.surveyCompleted = 'true';
+        });
+
+        // Hide the survey iframe and show the thank you message
+        document.getElementById('surveyMonkeyFrame').style.display = 'none';
+
+        // Set a cookie to remember survey completion for 30 days
+        var d = new Date();
+        d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
+        document.cookie = "surveyCompleted=true; expires=" + d.toUTCString() + "; path=/";
+
+        // Allow download after survey completion
+        setTimeout(function () {
+          window.location.href = 'resources/consultation-round-2/Draft Living Wage Reference Standard.pdf';
+        }, 1000); // Delay to allow user to read the thank you message
+      });
+
+    });
+
+  </script>
 </body>
 
 </html>
